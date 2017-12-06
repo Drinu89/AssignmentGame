@@ -76,11 +76,12 @@ public class ball : MonoBehaviour
         {
             Debug.Log("Right");
             ScoreBoard.p1Score++;
-            this.transform.position = new Vec
+            this.transform.position = new Vector3(-6.68f, 0.95f, -1f);
         }
         else if (coll.gameObject.name == "LeftCollider") {
             Debug.Log("Left");
             ScoreBoard.p2Score++;
+            this.transform.position = new Vector3(-6.68f, 0.95f, -1f);
         }
     }
 
