@@ -76,6 +76,7 @@ public class ball : MonoBehaviour
         {
             Debug.Log("Right");
             ScoreBoard.p1Score++;
+            this.transform.position = new Vec
         }
         else if (coll.gameObject.name == "LeftCollider") {
             Debug.Log("Left");
