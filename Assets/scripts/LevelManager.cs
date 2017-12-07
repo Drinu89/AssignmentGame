@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
+
+    void Start()
+    {
+     
+    }
+
     public void LoadLevel(string levelName)
     {
         print("Loading Level" + levelName);
@@ -12,9 +18,16 @@ public class LevelManager : MonoBehaviour {
         SceneManager.LoadScene(levelName);
     }
 
-    public void quitGame() 
+
+    public void LoadNextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    
+
+    public void quitGame()
     {
         UnityEditor.EditorApplication.isPlaying = false;
     }
-
 }

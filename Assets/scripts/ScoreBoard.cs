@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ScoreBoard : MonoBehaviour {
@@ -20,13 +21,22 @@ public class ScoreBoard : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        Score.text = p1Score.ToString() + " - " + p2Score.ToString();
+        Score.text = p1Score + " - " + p2Score;
+
+        if (p1Score == 5)
+        {
+            SceneManager.LoadScene("Level2");
+        }
+        if (p2Score == 5)
+        {
+            SceneManager.LoadScene("Level2");
+        }
 	}
 
-    
+
 }
