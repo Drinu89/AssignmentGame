@@ -21,22 +21,44 @@ public class ScoreBoard : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+       
 	}
 	
 	// Update is called once per frame
 	void Update () {
         Score.text = p1Score + " - " + p2Score;
 
-        if (p1Score == 5)
-        {
-            SceneManager.LoadScene("Level2");
-        }
-        if (p2Score == 5)
-        {
-            SceneManager.LoadScene("Level2");
-        }
+        levelMan();
+        
 	}
 
+    public void levelMan() { 
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+
+        if (sceneName == "Level1" & p1Score == 5) {
+            SceneManager.LoadScene("Level2");
+            print("Player 1 Won Level 1");
+        }
+        else if (sceneName == "Level1" & p2Score == 5)
+        {
+            SceneManager.LoadScene("Level2");
+            print("Player 2 Won Level 1");
+        }
+
+        else if (sceneName == "Level2" & p1Score == 15)
+        {
+            SceneManager.LoadScene("Level3");
+            print("Player 1 Won Level 2");
+        }
+        else if (sceneName == "Level2" & p2Score == 15)
+        {
+            SceneManager.LoadScene("Level3");
+            print("Player 2 Won Level 2");
+        }
+        
+            
+        
+    }
 
 }
