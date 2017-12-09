@@ -16,7 +16,7 @@ public class ScoreBoard : MonoBehaviour {
     public static int p1Score = 0;
     public static int p2Score = 0;
 
-    bool hasStarted = false;
+   // bool hasStarted = false;
 
 
 	// Use this for initialization
