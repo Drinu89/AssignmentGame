@@ -56,6 +56,15 @@ public class ScoreBoard : MonoBehaviour {
             SceneManager.LoadScene("Level3");
             print("Player 2 Won Level 2");
         }
+        else if (sceneName == "Level3" & p1Score == 30) {
+            SceneManager.LoadScene("Winner");
+            print("Player 1 Won Level 3");
+        }
+        else if (sceneName == "Level3" & p2Score == 30)
+        {
+            SceneManager.LoadScene("Winner");
+            print("Player 2 Won Level 3");
+        }
         
             
         
