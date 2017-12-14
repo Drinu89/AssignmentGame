@@ -36,6 +36,7 @@ public class ScoreBoard : MonoBehaviour {
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
 
+        //When one of the players Score is Scored it will Change the Level and displays who won in the console.
         if (sceneName == "Level1" & p1Score == 5) {
             SceneManager.LoadScene("Level2");
             print("Player 1 Won Level 1");

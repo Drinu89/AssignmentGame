@@ -35,35 +35,7 @@ public class Paddle2 : MonoBehaviour
 
     }
 
-    /*void CheckUser1Input()
-    {
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
 
-            if (transform.localPosition.y > topBounds)
-            {
-                transform.localPosition = new Vector3(transform.localPosition.x, topBounds, transform.localPosition.z);
-            }
-            else
-            {
-                transform.localPosition += Vector3.up * speed * Time.deltaTime;
-            }
-
-        }
-        else if (Input.GetKey(KeyCode.DownArrow))
-        {
-
-            if (transform.localPosition.y < bottomBounds)
-            {
-                transform.localPosition = new Vector3(transform.localPosition.x, bottomBounds, transform.localPosition.z);
-            }
-            else
-            {
-                transform.localPosition += Vector3.down * speed * Time.deltaTime;
-            }
-
-        }
-    }*/
 
 
 }

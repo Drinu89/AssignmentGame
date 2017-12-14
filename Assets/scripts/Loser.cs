@@ -14,6 +14,7 @@ public class Loser : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //In the Winner Scene displays who lose with their score.
         if (ScoreBoard.p1Score <  30)
         {
             lose.text = "Player 1   is    the   Loser!!            Score    " + ScoreBoard.p1Score;

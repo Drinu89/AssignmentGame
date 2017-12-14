@@ -19,6 +19,7 @@ public class Paddle : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        //ChekUser1Input method is declared.
         CheckUser1Input();
         
         
@@ -26,6 +27,7 @@ public class Paddle : MonoBehaviour {
 
     void CheckUser1Input()
     {
+        //When you keep holding W button the paddle moves Up
         if (Input.GetKey(KeyCode.W)) {
 
             if (transform.localPosition.y > topBounds)
@@ -37,6 +39,7 @@ public class Paddle : MonoBehaviour {
             }
 
         }
+            //When you keep pressing the S button the paddle moves down
         else if (Input.GetKey(KeyCode.S)) {
 
             if (transform.localPosition.y < bottomBounds)

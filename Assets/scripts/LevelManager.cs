@@ -28,6 +28,7 @@ public class LevelManager : MonoBehaviour {
 
     public void quitGame()
     {
+        //When the quit button is pressed the game quits.
         UnityEditor.EditorApplication.isPlaying = false;
     }
 }

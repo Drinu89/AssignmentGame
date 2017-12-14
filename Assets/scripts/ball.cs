@@ -13,11 +13,6 @@ public class ball : MonoBehaviour
 
     bool hasStarted = false;
 
-   // private int p1Score = 0;
-   // private int p2Score = 0;
-
-
-
     private void onCollisionEnter2D(Collision2D collision)
     {
         randomX = Random.Range(0f, 0.2f);
@@ -38,7 +33,7 @@ public class ball : MonoBehaviour
     {
         player1Paddle = GameObject.FindObjectOfType<Paddle>();
 
-        //saves the distance between the ball and the paddle
+        //The distance between the paddle and the ball
         paddleToBallVector = this.transform.position - player1Paddle.transform.position;
     }
 
@@ -46,11 +41,9 @@ public class ball : MonoBehaviour
     void Update()
     {
 
-
-
         if (!hasStarted) //if (hasStarted == false)
         {
-            //moves the ball with the paddle keeping the distance
+            //moves the ball with the paddle with that distance
             this.transform.position = player1Paddle.transform.position + paddleToBallVector;
 
 
@@ -58,6 +51,7 @@ public class ball : MonoBehaviour
             //if left click is pressed
             if (Input.GetMouseButtonDown(0))
             {
+                //When left click is pressed the ball starts to move and game game begin
                 print("Left Click");
                 hasStarted = true;
 
@@ -72,30 +66,18 @@ public class ball : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D coll)
     {
+        //When the ball hits the RightCollider +1 Score for Player 1 and tranform in the middle of the pitch.
         if (coll.gameObject.name == "RightCollider")
         {
             ScoreBoard.p1Score++;
             this.transform.position = new Vector3(-6.68f, 0.95f, -1f);
         }
+        //When the ball hits the LeftCollider +1 Score for Player 2 and tranform in the middle of the pitch.
         else if (coll.gameObject.name == "LeftCollider") {
             ScoreBoard.p2Score++;
             this.transform.position = new Vector3(-6.68f, 0.95f, -1f);
         }
     }
 
-   /* void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "RightCollider")
-        {
-            print("P1 + 1");
-            p1Score += 1;
-        }
-        if (col.gameObject.tag == "LeftCollider")
-        {
-            print("P2 + 1");
-            p2Score += 1;
-            
-        }
-    }*/
 }
 

@@ -14,6 +14,7 @@ public class Winner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //In the Winner Scene displays who win with their score.
         if (ScoreBoard.p1Score == 30)
         {
             win.text = "Player 1   is    the   Winner!!         Score    " + ScoreBoard.p1Score;
