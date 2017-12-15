@@ -17,11 +17,11 @@ public class Loser : MonoBehaviour {
         //In the Winner Scene displays who lose with their score.
         if (ScoreBoard.p1Score <  30)
         {
-            lose.text = "Player 1   is    the   Loser!!            Score    " + ScoreBoard.p1Score;
+            lose.text = "Player 1              Lost!!            Score    " + ScoreBoard.p1Score;
         }
         else if (ScoreBoard.p2Score < 30)
         {
-            lose.text = "Player 2   is    the   Loser!!            Score    " + ScoreBoard.p2Score;
+            lose.text = "Player 2              Lost!!            Score    " + ScoreBoard.p2Score;
         }
 	}
 }

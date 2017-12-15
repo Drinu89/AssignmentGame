@@ -24,7 +24,7 @@ public class ball : MonoBehaviour
         if (hasStarted)
         {
             //velocity = velocity + tweak
-            this.GetComponent<Rigidbody2D>().velocity += tweak;
+           this.GetComponent<Rigidbody2D>().velocity += tweak;
         }
     }
 
@@ -56,7 +56,7 @@ public class ball : MonoBehaviour
                 hasStarted = true;
 
                 //set the velocity of the ball to 2x 10y
-                this.GetComponent<Rigidbody2D>().velocity = new Vector2(10f, -5f);
+                this.GetComponent<Rigidbody2D>().velocity = new Vector2(5.5f, -3.5f);
 
             }
 

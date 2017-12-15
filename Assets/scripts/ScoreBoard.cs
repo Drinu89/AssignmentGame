@@ -26,7 +26,7 @@ public class ScoreBoard : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Score.text = p1Score + " - " + p2Score;
+        Score.text = p1Score + "  -  " + p2Score;
 
         levelMan();
         
